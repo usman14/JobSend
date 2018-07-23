@@ -1,4 +1,4 @@
-package com.stark.usman.JobSend;
+package com.stark.mobile.JobSend;
 
 import android.app.Notification;
 import android.app.PendingIntent;
