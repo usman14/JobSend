@@ -75,12 +75,17 @@ open class Activity_Signup: AppCompatActivity() {
         }
     }
     private fun Set_Values() {
-        val list=realm.where(Realm_User::class.java).findFirst()
-        et_company_name.setText(list.company_name.toString())
-        et_your_id.setText(list.worker_id.toString())
-        et_manager_name.setText(list.manager_name.toString())
-        et_your_vehicle_id.setText(list.vehicle_id.toString())
-        et_worker_name.setText(list.worker_name.toString())
+        val count=realm.where(Realm_User::class.java).count()
+        if(count>0)
+        {
+            val list=realm.where(Realm_User::class.java).findFirst()
+            et_company_name.setText(list.company_name.toString())
+            et_your_id.setText(list.worker_id.toString())
+            et_manager_name.setText(list.manager_name.toString())
+            et_your_vehicle_id.setText(list.vehicle_id.toString())
+            et_worker_name.setText(list.worker_name.toString())
+        }
+
     }
 
 }

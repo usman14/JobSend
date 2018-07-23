@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.widget.Toast
 import com.stark.usman.stark.Realm_Objects.Realm_Project_unit
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -15,6 +16,7 @@ import kotlinx.android.synthetic.main.rv_simple.*
 open class Activity_History_Project: AppCompatActivity()
 {
     lateinit var realm: Realm
+    lateinit var adapter: Adapter_History_Project
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,15 +49,22 @@ open class Activity_History_Project: AppCompatActivity()
 
             var list=realm.where(Realm_Project_unit::class.java).equalTo("month",result).findAllSorted("id",Sort.ASCENDING)
             rv_simple.layoutManager= LinearLayoutManager(this)
-            rv_simple.adapter= Adapter_History_Project(this, list)
+            adapter= Adapter_History_Project(this, list)
+            rv_simple.adapter=adapter
             //var adapter=Adapter_Edit_Project(this,list,object:Listener)
 
         }
         else
         {
-            //Toast.makeText(this@Activity_History_Project, "No data", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@Activity_History_Project, "No data", Toast.LENGTH_SHORT).show()
 
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        adapter?.notifyDataSetChanged()
+
     }
 
 

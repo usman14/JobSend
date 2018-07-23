@@ -134,66 +134,69 @@ open class Activity_Generate_Report: Activity() {
 
     @Throws(IOException::class, DocumentException::class)
     fun createPdf() {
-        Toast.makeText(this,"createpdf called",Toast.LENGTH_LONG).show()
-        val month_name=intent.getStringExtra("month")
-
-        val list = realm.where(Realm_Project_unit::class.java).equalTo("month",month_name).findAllSorted("monthid",Sort.DESCENDING)
-
-        val document = Document()
-        val path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Workreport"
-        val dir = File(path)
-        if (!dir.exists())
-        dir.mkdirs()
-
-        val file = File(dir, list[0]?.month)
-        val fOut = FileOutputStream(file)
-
-
-        //open the document
         val listone = realm.where(Realm_User::class.java).findAll()
+        val count = realm.where(Realm_User::class.java).count()
+        if(count>0)
+        {
+            Toast.makeText(this,"Creating Pdf File",Toast.LENGTH_LONG).show()
+            val month_name=intent.getStringExtra("month")
 
-        Log.d("listsize",list.size.toString())
-        PdfWriter.getInstance(document, fOut)
-        document.open()
-        var p5=Paragraph("Company Name :   "+listone[0]?.company_name)
-        var p1=Paragraph("Worker Name  :   "+listone[0]?.worker_name)
-        var p2=Paragraph("Worker Id    :   "+listone[0]?.worker_id)
-        var p3=Paragraph("Report Month :   "+list[0]?.month)
-        var p4=Paragraph("Manager Name :   "+listone[0]?.manager_name)
+            val list = realm.where(Realm_Project_unit::class.java).equalTo("month",month_name).findAllSorted("monthid",Sort.DESCENDING)
 
-        p1.setAlignment(Paragraph.ALIGN_CENTER)
-        p2.setAlignment(Paragraph.ALIGN_CENTER)
-        p3.setAlignment(Paragraph.ALIGN_CENTER)
-        p4.setAlignment(Paragraph.ALIGN_CENTER)
-        p5.setAlignment(Paragraph.ALIGN_CENTER)
+            val document = Document()
+            val path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Workreport"
+            val dir = File(path)
+            if (!dir.exists())
+                dir.mkdirs()
 
-        p1.font.isBold
-        p2.font.isBold
-        p3.font.isBold
-        p4.font.isBold
-        p5.font.isBold
-        document.add(p5)
-        document.add(p1)
-        document.add(p2)
-        document.add(p3)
-        document.add(p4)
+            val file = File(dir, list[0]?.month)
+            val fOut = FileOutputStream(file)
 
 
+            //open the document
 
-        //var table = PdfPTable(6)
-        val table = PdfPTable(floatArrayOf(1f,1f, 1f,1f,1f,1f,2f))
-        table.setWidthPercentage(100f);
+            Log.d("listsize",list.size.toString())
+            PdfWriter.getInstance(document, fOut)
+            document.open()
+            var p5=Paragraph("Company Name :   "+listone[0]?.company_name)
+            var p1=Paragraph("Worker Name  :   "+listone[0]?.worker_name)
+            var p2=Paragraph("Worker Id    :   "+listone[0]?.worker_id)
+            var p3=Paragraph("Report Month :   "+list[0]?.month)
+            var p4=Paragraph("Manager Name :   "+listone[0]?.manager_name)
 
-        table.setSpacingBefore(10F)
-        table.setSpacingAfter(10F)
-        table.addCell("PROJECT NAME")
-        table.addCell("PROJECT ADDRESS")
-        table.addCell("PROJECT DATE")
-        table.addCell("STARTING TIME")
-        table.addCell("FINISH TIME")
-        table.addCell("WORK HOURS")
-        table.addCell("REMARKS")
-        for (i in 0..list.size-1) {
+            p1.setAlignment(Paragraph.ALIGN_CENTER)
+            p2.setAlignment(Paragraph.ALIGN_CENTER)
+            p3.setAlignment(Paragraph.ALIGN_CENTER)
+            p4.setAlignment(Paragraph.ALIGN_CENTER)
+            p5.setAlignment(Paragraph.ALIGN_CENTER)
+
+            p1.font.isBold
+            p2.font.isBold
+            p3.font.isBold
+            p4.font.isBold
+            p5.font.isBold
+            document.add(p5)
+            document.add(p1)
+            document.add(p2)
+            document.add(p3)
+            document.add(p4)
+
+
+
+            //var table = PdfPTable(6)
+            val table = PdfPTable(floatArrayOf(1f,1f, 1f,1f,1f,1f,2f))
+            table.setWidthPercentage(100f);
+
+            table.setSpacingBefore(10F)
+            table.setSpacingAfter(10F)
+            table.addCell("PROJECT NAME")
+            table.addCell("PROJECT ADDRESS")
+            table.addCell("PROJECT DATE")
+            table.addCell("STARTING TIME")
+            table.addCell("FINISH TIME")
+            table.addCell("WORK HOURS")
+            table.addCell("REMARKS")
+            for (i in 0..list.size-1) {
 
 
                 table.addCell(list[i].project_name)
@@ -205,10 +208,16 @@ open class Activity_Generate_Report: Activity() {
                 table.addCell(list[i].remarks)
 
 
+            }
+            document.add(table)
+            document.close()
+            viewPdf1(list[0].month.toString())
         }
-        document.add(table)
-        document.close()
-        viewPdf1(list[0].month.toString())
+        else
+        {
+            Toast.makeText(this@Activity_Generate_Report, "Please fill your personal data before generating report.", Toast.LENGTH_SHORT).show()
+            this.finish()
+        }
     }
     private fun viewPdf1(file: String) {
 

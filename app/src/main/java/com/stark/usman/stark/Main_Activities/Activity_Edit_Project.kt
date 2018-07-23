@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.stark.usman.stark.Realm_Objects.Realm_Project_unit
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -53,7 +54,7 @@ open class Activity_Edit_Project: AppCompatActivity()
         }
         else
         {
-            Toast.makeText(this@Activity_Edit_Project, "No data", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@Activity_Edit_Project, "No data", Toast.LENGTH_LONG).show()
 
         }
         }

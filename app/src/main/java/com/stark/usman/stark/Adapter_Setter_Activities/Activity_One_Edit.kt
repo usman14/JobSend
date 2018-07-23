@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
+import android.widget.Toast
 import com.stark.usman.stark.Adapters.Adapter_Edit_One
 import com.stark.usman.stark.R
 import com.stark.usman.stark.Realm_Objects.Realm_Project_unit
@@ -20,6 +21,7 @@ open class Activity_One_Edit: AppCompatActivity()
 {
     lateinit var realm: Realm
     lateinit var realm_functions: realm_functions
+    lateinit var adapter: Adapter_Edit_One
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,8 +42,28 @@ open class Activity_One_Edit: AppCompatActivity()
 
     private fun Set_Values() {
         var list=realm.where(Realm_Project_unit::class.java) .findAllSorted("monthid", Sort.DESCENDING);
-        rv_simple.layoutManager= LinearLayoutManager(this)
-        rv_simple.adapter= Adapter_Edit_One(this, realm_functions.remove_duplicate(list))
+        Log.d("camesss",list.size.toString())
+        if(list.size==0)
+        {
+            Toast.makeText(this@Activity_One_Edit, "No data to Show", Toast.LENGTH_LONG).show()
+            this.finish()
+        }
+        else
+        {
+            rv_simple.layoutManager= LinearLayoutManager(this)
+            adapter= Adapter_Edit_One(this, realm_functions.remove_duplicate(list))
+            rv_simple.adapter=adapter
+        }
+
+
+
+    }
+    override fun onResume() {
+        super.onResume()
+
+        adapter?.notifyDataSetChanged()
+
+
 
     }
 }

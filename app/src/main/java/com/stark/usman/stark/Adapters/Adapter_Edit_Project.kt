@@ -31,7 +31,7 @@ open class Adapter_Edit_Project(val context: Context, val list:List<Realm_Projec
         holder?.project_name?.text=list.get(position).project_name
         holder?.project_date?.text=list.get(position).project_date
         holder?.project_view?.setOnClickListener {
-            (holder.project_view.setBackgroundColor(Color.GREEN))
+            (holder.project_view.setBackgroundColor(Color.RED))
             val intent = Intent(context, Activity_Add_Project::class.java)
             intent.putExtra("id",list[position].id.toString())
             Log.d("id",list[position].id.toString())
