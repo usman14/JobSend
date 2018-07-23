@@ -1,16 +1,16 @@
-package com.stark.usman.stark
+package com.stark.usman.JobSend
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.stark.usman.stark.Adapter_Setter_Activities.Activity_One_Edit
-import com.stark.usman.stark.Adapter_Setter_Activities.Activity_One_History
-import com.stark.usman.stark.Adapter_Setter_Activities.Activity_One_Report
-import com.stark.usman.stark.Main_Activities.Activity_Add_Project
-import com.stark.usman.stark.Main_Activities.Activity_Settings
-import com.stark.usman.stark.Main_Activities.Activity_Signup
-import com.stark.usman.stark.Realm_Objects.Realm_User
+import com.stark.usman.JobSend.Adapter_Setter_Activities.Activity_One_Edit
+import com.stark.usman.JobSend.Adapter_Setter_Activities.Activity_One_History
+import com.stark.usman.JobSend.Adapter_Setter_Activities.Activity_One_Report
+import com.stark.usman.JobSend.Main_Activities.Activity_Add_Project
+import com.stark.usman.JobSend.Main_Activities.Activity_Settings
+import com.stark.usman.JobSend.Main_Activities.Activity_Signup
+import com.stark.usman.JobSend.Realm_Objects.Realm_User
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import kotlinx.android.synthetic.main.activity_main.*

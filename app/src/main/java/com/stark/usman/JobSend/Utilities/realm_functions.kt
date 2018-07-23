@@ -1,10 +1,10 @@
-package com.stark.usman.stark.Utilities
+package com.stark.usman.JobSend.Utilities
 
 import android.app.Activity
 import android.util.Log
 import android.widget.Toast
-import com.stark.usman.stark.Realm_Objects.Realm_Project_unit
-import com.stark.usman.stark.Realm_Objects.Realm_User
+import com.stark.usman.JobSend.Realm_Objects.Realm_Project_unit
+import com.stark.usman.JobSend.Realm_Objects.Realm_User
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import java.text.SimpleDateFormat

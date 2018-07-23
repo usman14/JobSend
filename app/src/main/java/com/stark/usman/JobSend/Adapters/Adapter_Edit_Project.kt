@@ -1,4 +1,4 @@
-package com.stark.usman.stark.Adapters
+package com.stark.usman.JobSend.Adapters
 
 import android.content.Context
 import android.content.Intent
@@ -6,11 +6,11 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.stark.usman.stark.Realm_Objects.Realm_Project_unit
+import com.stark.usman.JobSend.Realm_Objects.Realm_Project_unit
 import android.support.v7.widget.RecyclerView
 import android.util.Log
-import com.stark.usman.stark.Main_Activities.Activity_Add_Project
-import com.stark.usman.stark.R
+import com.stark.usman.JobSend.Main_Activities.Activity_Add_Project
+import com.stark.usman.JobSend.R
 import kotlinx.android.synthetic.main.activity_edit_project.view.*
 
 open class Adapter_Edit_Project(val context: Context, val list:List<Realm_Project_unit>):

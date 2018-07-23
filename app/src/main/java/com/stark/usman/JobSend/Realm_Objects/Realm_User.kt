@@ -1,4 +1,4 @@
-package com.stark.usman.stark.Realm_Objects
+package com.stark.usman.JobSend.Realm_Objects
 
 import io.realm.RealmObject
 

@@ -1,4 +1,4 @@
-package com.stark.usman.stark.Adapter_Setter_Activities
+package com.stark.usman.JobSend.Adapter_Setter_Activities
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.widget.Toast
-import com.stark.usman.stark.Adapters.Adapter_Edit_One
-import com.stark.usman.stark.Adapters.Adapter_History_One
-import com.stark.usman.stark.R
-import com.stark.usman.stark.Realm_Objects.Realm_Project_unit
-import com.stark.usman.stark.Utilities.realm_functions
+import com.stark.usman.JobSend.Adapters.Adapter_Edit_One
+import com.stark.usman.JobSend.Adapters.Adapter_History_One
+import com.stark.usman.JobSend.R
+import com.stark.usman.JobSend.Realm_Objects.Realm_Project_unit
+import com.stark.usman.JobSend.Utilities.realm_functions
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.Sort

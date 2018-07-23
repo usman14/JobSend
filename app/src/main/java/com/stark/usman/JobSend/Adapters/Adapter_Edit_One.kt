@@ -1,4 +1,4 @@
-package com.stark.usman.stark.Adapters
+package com.stark.usman.JobSend.Adapters
 
 import android.content.Context
 import android.content.Intent
@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.stark.usman.stark.Main_Activities.Activity_Edit_Project
-import com.stark.usman.stark.R
+import com.stark.usman.JobSend.Main_Activities.Activity_Edit_Project
+import com.stark.usman.JobSend.R
 import kotlinx.android.synthetic.main.rv_layout_show_history_month.view.*
 
 open class Adapter_Edit_One(val context: Context, val list:List<String>):

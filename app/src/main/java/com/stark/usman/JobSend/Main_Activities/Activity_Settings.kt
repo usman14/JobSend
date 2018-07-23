@@ -1,4 +1,4 @@
-package com.stark.usman.stark.Main_Activities
+package com.stark.usman.JobSend.Main_Activities
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -9,15 +9,15 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.stark.usman.stark.R
-import com.stark.usman.stark.Realm_Objects.Realm_User
-import com.stark.usman.stark.Utilities.realm_functions
+import com.stark.usman.JobSend.R
+import com.stark.usman.JobSend.Realm_Objects.Realm_User
+import com.stark.usman.JobSend.Utilities.realm_functions
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import android.widget.CompoundButton
-import com.stark.usman.stark.AlarmReceiver
+import com.stark.usman.JobSend.AlarmReceiver
 import java.util.*
 
 
