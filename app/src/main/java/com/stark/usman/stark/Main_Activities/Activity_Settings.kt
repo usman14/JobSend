@@ -29,7 +29,7 @@ open class Activity_Settings: AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         setTitle("Edit Personal Settings");
-//
+////
         try {
             realm= Realm.getDefaultInstance()
 

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">JOBSEND</string>
+    <string name="add_project">Add Project</string>
+    <string name="edit_project">Edit Project</string>
+    <string name="show_history">Show History</string>
+    <string name="generate_report">Generate Report</string>
+    <string name="project_name">Project Name</string>
+    <string name="project_date">Project Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="finish_time">Finish Time</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_id">Your Worker Id</string>
+    <string name="save">Save</string>
+    <string name="delete_project">Delete Entry</string>
+    <string name="your_manager_name">Manager Name</string>
+    <string name="your_id_optional">Your Id (optional)</string>
+    <string name="your_manager_name_optional">Manager Name (optional)</string>
+</resources>

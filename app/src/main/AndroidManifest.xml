@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stark.usman.stark">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/iconone"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Main_Activities.Activity_Signup"></activity>
+        <activity android:name=".Main_Activities.Activity_Add_Project"></activity>
+        <activity android:name=".Main_Activities.Activity_Edit_Project"></activity>
+        <activity android:name=".Main_Activities.Activity_Generate_Report"></activity>
+        <activity android:name=".Main_Activities.Activity_History_Project"></activity>
+        <activity android:name=".Adapter_Setter_Activities.Activity_One_History"></activity>
+        <activity android:name=".Adapter_Setter_Activities.Activity_One_Edit"></activity>
+        <activity android:name=".Adapter_Setter_Activities.Activity_One_Report"></activity>
+        <activity android:name=".Main_Activities.Activity_Settings"></activity>
+
+        <receiver android:name=".AlarmReceiver" />
+
+    </application>
+
+
+
+</manifest>
