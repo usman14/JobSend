@@ -11,6 +11,7 @@ import com.stark.usman.JobSend.Main_Activities.Activity_Add_Project
 import com.stark.usman.JobSend.Main_Activities.Activity_Settings
 import com.stark.usman.JobSend.Main_Activities.Activity_Signup
 import com.stark.usman.JobSend.Realm_Objects.Realm_User
+import com.stark.usman.JobSend.R
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import kotlinx.android.synthetic.main.activity_main.*

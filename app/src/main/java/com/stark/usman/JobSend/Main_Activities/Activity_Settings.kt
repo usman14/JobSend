@@ -17,7 +17,7 @@ import io.realm.RealmConfiguration
 import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import android.widget.CompoundButton
-import com.stark.usman.JobSend.AlarmReceiver
+import com.stark.mobile.JobSend.AlarmReceiver
 import java.util.*
 
 

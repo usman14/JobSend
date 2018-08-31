@@ -9,7 +9,7 @@ apply plugin: 'realm-android'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.stark.usman.stark"
+        applicationId "com.stark.usman.JobSend"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
