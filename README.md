@@ -3,7 +3,7 @@ Workers can add data about their project title,address,working hours and their r
 A Pdf file containing work report will be generated with a click, which can be forwarded to
 the company or saved for future.
 
-<img src="app/src/main/res/drawable/one.png" width="600" height="300">
+<img src="app/src/main/res/drawable/one.png" width="700" height="400">
 
 
-<img src="app/src/main/res/drawable/two.png" width="600" height="300">
+<img src="app/src/main/res/drawable/two.png" width="700" height="400">
