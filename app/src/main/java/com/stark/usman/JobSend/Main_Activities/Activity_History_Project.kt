@@ -1,6 +1,7 @@
 package com.stark.usman.JobSend.Main_Activities
 
 import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -10,8 +11,15 @@ import io.realm.Realm
 import io.realm.RealmConfiguration
 import com.stark.usman.JobSend.Adapters.Adapter_History_Project
 import com.stark.usman.JobSend.R
+import io.reactivex.Observable
+import io.reactivex.Observer
+import io.reactivex.disposables.Disposable
+import io.reactivex.functions.Function
+import io.reactivex.internal.operators.observable.ObservableFromArray
+import io.realm.RealmResults
 import io.realm.Sort
 import kotlinx.android.synthetic.main.rv_simple.*
+import java.util.*
 
 open class Activity_History_Project: AppCompatActivity()
 {
@@ -66,6 +74,5 @@ open class Activity_History_Project: AppCompatActivity()
         adapter?.notifyDataSetChanged()
 
     }
-
 
 }
