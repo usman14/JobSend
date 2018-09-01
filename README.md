@@ -12,3 +12,7 @@
 
 
 <img src="app/src/main/res/drawable/two.png" width="700" height="400">
+
+## Motivation
+
+My very first application using Kotlin.I developed this app with the motive to implement and enhance my knowlegde of Kotlin.
