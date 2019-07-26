@@ -16,6 +16,7 @@ open class Adapter_Edit_One(val context: Context, val list:List<String>):
         val view=LayoutInflater.from(context).inflate(R.layout.rv_layout_show_history_month,parent, false)
         val asdf=null;
         val asdf1=null;
+        val asdf2=null;
         return Viewholder(view)
     }
 

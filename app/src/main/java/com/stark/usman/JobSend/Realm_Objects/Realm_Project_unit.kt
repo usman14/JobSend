@@ -7,6 +7,7 @@ open class Realm_Project_unit: RealmObject()
     var project_name: String?=null
     var project_address: String?=null
     var project_date: String?=null
+    var project_date1: String?=null
     var start_time: String?=null
     var finish_time: String?=null
     var remarks: String?=null
