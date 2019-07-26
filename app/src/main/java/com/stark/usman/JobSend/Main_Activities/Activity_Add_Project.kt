@@ -27,6 +27,7 @@ open class Activity_Add_Project: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTitle("Add Project");
+        setTitle("Add Project");
 
 
         val extras = intent.extras

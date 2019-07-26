@@ -15,6 +15,7 @@ open class Adapter_Edit_One(val context: Context, val list:List<String>):
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): Viewholder {
         val view=LayoutInflater.from(context).inflate(R.layout.rv_layout_show_history_month,parent, false)
         val asdf=null;
+        val asdf1=null;
         return Viewholder(view)
     }
 
